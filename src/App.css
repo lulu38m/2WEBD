@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply w-full h-full;
+}
+.hover-letter {
+  transition: all 0.3s ease;
+}
+
+.hover-letter:hover {
+  color: orange;
+  transform: scale(1.2) translateY(-2px);
+}
