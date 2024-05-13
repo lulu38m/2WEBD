@@ -1,6 +1,6 @@
 function wrapLettersWithSpan(text : string) {
     return text.split('').map((letter, index) => {
-        if (['T', 'C', 'V', 'I'].includes(letter)) {
+        if (['M', 'o', 'A'].includes(letter)) {
             return <span key={index} className="hover-letter">{letter}</span>;
         }
         return letter;
@@ -15,7 +15,7 @@ return (
             <div className="relative left-[calc(50%-20rem)] top-[-14rem] aspect-[1155/678] w-[20rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-white to-orange-500 opacity-30 sm:left-[calc(50%-40rem)] sm:top-[-14rem] sm:w-[45rem] z-10 clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
             <div className="relative text-center top-[-25rem] z-20">
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl cursor-default">
-                    {wrapLettersWithSpan("Tennis Club Val de l'Indre")}
+                    {wrapLettersWithSpan("Museum of Art")}
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">Jouez, apprenez, progressez !</p>
                 <p className="mt-2 text-lg leading-8 text-gray-600">Le <span className="text-orange-600">Tennis Club Val de l'Indre</span> est une association sportive qui a pour but de promouvoir la pratique du tennis pour tous les âges et tous les niveaux.</p>
