@@ -9,11 +9,11 @@ export default function Header() {
                 <nav className="flex items-center justify-between p-6 lg:px-8 bg-white" aria-label="Global">
                     <div className="flex lg:flex-1">
                         <a href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">TCVI</span>
+                            <span className="sr-only">Museum</span>
                         </a>
                     </div>
                     <div className="lg:flex lg:gap-x-12">
-                        <Link to="/" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Accueil</Link>
+                        <Link to="/" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Home</Link>
                         <Link to="/club" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Search</Link>
                         <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Actualité</a>
                         <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Où nous trouvez ?</a>
