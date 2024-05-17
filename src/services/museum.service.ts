@@ -32,7 +32,7 @@ export async function getHighlightObjects(): Promise<ArtObject[]> {
     const response = await fetch(`${baseURL}/search?isHighlight=true&hasImages=true&q=cat`);
     const result = await response.json()as ListArtObject;
     const artObjects:ArtObject[] = [];
-    for (const objectID of result.objectIDs.slice(0, 6)) {
+    for (const objectID of result.objectIDs.slice(0, 8)) {
         const art = await getArtByID(objectID);
         artObjects.push(art);
     }
