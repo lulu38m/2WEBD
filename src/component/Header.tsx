@@ -14,9 +14,7 @@ export default function Header() {
                     </div>
                     <div className="lg:flex lg:gap-x-12">
                         <Link to="/" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Home</Link>
-                        <Link to="/club" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Search</Link>
-                        <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Actualité</a>
-                        <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Où nous trouvez ?</a>
+                        <Link to="/search" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Search</Link>
                     </div>
                 </nav>
             </header>

@@ -1,16 +1,23 @@
 export type ArtObject = {
     objectID: number;
-    isHighlight: boolean;
     primaryImage: string;
-    title: string;
+    additionalImages: string[];
     artistDisplayName: string;
+    artistDisplayBio: string;
+    title: string;
+    medium: string;
     objectDate: string;
-    primaryImageSmall: string;
+    dimensions: string;
+    department: string;
+    creditLine: string;
+    objectURL: string;
+    tags: {
+        term: string;
+        Wikidata_URL: string;
+    }[];
 };
 
 export type ListArtObject = {
     objectIDs: number[];
     total: number;
 };
-
-
