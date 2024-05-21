@@ -27,9 +27,8 @@ export async function getArtByID(id:number): Promise<ArtObject> {
 }
 
 
-
 export async function getHighlightObjects(): Promise<ArtObject[]> {
-    const response = await fetch(`${baseURL}/search?isHighlight=true&hasImages=true&q=cat`);
+    const response = await fetch(`${baseURL}/search?isHighlight=true&hasImages=true&q=paint`);
     const result = await response.json()as ListArtObject;
     const artObjects:ArtObject[] = [];
     for (const objectID of result.objectIDs.slice(0, 8)) {
@@ -38,4 +37,3 @@ export async function getHighlightObjects(): Promise<ArtObject[]> {
     }
     return artObjects;
 }
-

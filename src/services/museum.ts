@@ -12,3 +12,5 @@ export type ListArtObject = {
     objectIDs: number[];
     total: number;
 };
+
+

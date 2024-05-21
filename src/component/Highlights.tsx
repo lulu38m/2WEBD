@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { ArtObject } from "../services/museum.ts";
 import { getHighlightObjects } from "../services/museum.service.ts";
 import { ThreeDots } from "react-loader-spinner";
+import { Link } from "react-router-dom";
+
 
 export default function Highlights() {
     const [arts, setArts] = useState<ArtObject[] | null>(null);
@@ -38,15 +40,18 @@ export default function Highlights() {
     );
 }
 
+
 function Highlight(props: { art: ArtObject }) {
     return (
-        <div className="bg-white shadow-sm rounded-lg overflow-hidden">
-            <img src={props.art.primaryImage} alt={props.art.title} className="w-full h-64 object-cover object-center" />
-            <div className="p-6">
-                <h2 className="text-xl font-semibold text-gray-900">{props.art.title}</h2>
-                <p className="text-base font-medium text-gray-600">{props.art.artistDisplayName}</p>
-                <p className="text-base font-medium text-gray-600">{props.art.objectDate}</p>
+        <Link to={`/art/${props.art.objectID}`}>
+            <div className="bg-white shadow-sm rounded-lg overflow-hidden">
+                <img src={props.art.primaryImage} alt={props.art.title} className="w-full h-64 object-cover object-center" />
+                <div className="p-6">
+                    <h2 className="text-xl font-semibold text-gray-900">{props.art.title}</h2>
+                    <p className="text-base font-medium text-gray-600">{props.art.artistDisplayName}</p>
+                    <p className="text-base font-medium text-gray-600">{props.art.objectDate}</p>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 }
