@@ -2,8 +2,6 @@ import {ArtObject, ListArtObject} from "./museum.ts";
 
 const baseURL = 'https://collectionapi.metmuseum.org/public/collection/v1';
 
-
-
 export type ApiResponse<R> = {
     count: number;
     next: string;
@@ -36,4 +34,15 @@ export async function getHighlightObjects(): Promise<ArtObject[]> {
         artObjects.push(art);
     }
     return artObjects;
+}
+
+export  async function getSearchObjects(query:string): Promise<ArtObject[]> {
+    const response = await fetch(`${baseURL}/search?hasImages=true&q=${encodeURIComponent(query)}`);
+    const result = await response.json()as ListArtObject;
+    const artObjects:ArtObject[] = [];
+    for (const objectID of result.objectIDs.slice(0, 32)) {
+        const art = await getArtByID(objectID);
+        artObjects.push(art);
+    }
+    return artObjects.filter((art) => art.primaryImage !== '');
 }
