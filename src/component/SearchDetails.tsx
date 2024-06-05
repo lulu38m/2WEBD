@@ -61,7 +61,7 @@ export default function SearchDetails({ searchTerm, dateBegin, dateEnd, geoLocat
     }
 
     return (
-        <div id="" className="relative px-6 lg:px-8">
+        <div id="" className="relative px-6 lg:px-8 sm:pt-20">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl cursor-default text-center py-3 pb-12">Result for {searchTerm}</h1>
             <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {arts.map((art) => (

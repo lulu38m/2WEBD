@@ -13,3 +13,17 @@
   color: orange;
   transform: scale(1.2) translateY(-2px);
 }
+.content {
+  padding-top: 80px;
+}
+header.fixed {
+  height: 64px;
+}
+
+/* Dans votre fichier CSS global */
+@media (max-width: 640px) {
+  .content {
+    margin-top: 64px; /* Ajustez cette valeur selon la hauteur de votre en-tête */
+  }
+}
+

@@ -22,8 +22,8 @@ export default function Search() {
     };
 
     return (
-        <div className="bg-white pt-16 sm:pt-20">
-            <form className="max-w-md mx-auto" onSubmit={handleSearchSubmit}>
+        <div className="bg-white pt-16 sm:pt-20 relative">
+            <form className="max-w-md mx-auto relative z-20" onSubmit={handleSearchSubmit}>
                 <div className="mb-4">
                     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                     <div className="relative">
@@ -73,11 +73,11 @@ export default function Search() {
                         />
                     </div>
                 </div>
-                <button type="submit" className="mt-4 text-white bg-orange-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
+                <button type="submit" className="mt-4 text-white bg-orange-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 relative z-30">Search</button>
             </form>
-            <div className="relative isolate px-6 lg:px-8">
+            <div className="relative isolate px-6 lg:px-8 z-10">
                 <div className="lg:pt-56">
-                    <div className="relative left-[calc(50%-20rem)] top-[-14rem] aspect-[1155/678] w-[20rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-white to-orange-500 opacity-30 sm:left-[calc(50%-40rem)] sm:top-[-14rem] sm:w-[45rem] z-10 clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                    <div className="relative left-[calc(50%-20rem)] top-[-14rem] aspect-[1155/678] w-[20rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-white to-orange-500 opacity-30 sm:left-[calc(50%-40rem)] sm:top-[-14rem] sm:w-[45rem] z-0 clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
                     <div className="relative text-center top-[-25rem] z-20">
                         <SearchDetails searchTerm={searchTerm} dateBegin={searchBegin} dateEnd={searchEnd} geoLocation={geoLocation} isHighlight={isHighlight} />
                     </div>
