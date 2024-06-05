@@ -4,19 +4,19 @@ import { ThreeDots } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 import { getSearchObjects } from "../services/museum.service.ts";
 
-export default function SearchDetails({ searchTerm }: { searchTerm: string }) {
+export default function SearchDetails({ searchTerm, dateBegin, dateEnd, geoLocation, isHighlight }: { searchTerm: string, dateBegin: string, dateEnd: string, geoLocation?: string, isHighlight	?: boolean}){
     const [arts, setArts] = useState<ArtObject[] | null>(null);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         if (searchTerm) {
             setLoading(true);
-            getSearchObjects(searchTerm).then((result) => {
+            getSearchObjects(searchTerm, dateBegin, dateEnd, geoLocation, isHighlight).then((result) => {
                 setArts(result);
                 setLoading(false);
             });
         }
-    }, [searchTerm]);
+    }, [searchTerm, dateBegin, dateEnd, geoLocation, isHighlight]);
 
     if (loading) {
         return (
@@ -62,7 +62,7 @@ export default function SearchDetails({ searchTerm }: { searchTerm: string }) {
 
     return (
         <div id="" className="relative px-6 lg:px-8">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl cursor-default text-center py-3 pb-12">Search</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl cursor-default text-center py-3 pb-12">Result for {searchTerm}</h1>
             <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {arts.map((art) => (
                     <Search art={art} key={art.objectID} />

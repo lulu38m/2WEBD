@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className="flex justify-between items-center">
                     <div className="flex space-x-6">
                         <Link to="/" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Home</Link>
-                        <Link to="/club" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Search</Link>
+                        <Link to="/search" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Search</Link>
                         <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Actualité</a>
                         <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-500">Où nous trouvez ?</a>
                     </div>

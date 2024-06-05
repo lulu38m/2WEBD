@@ -36,10 +36,24 @@ export async function getHighlightObjects(): Promise<ArtObject[]> {
     return artObjects;
 }
 
-export  async function getSearchObjects(query:string): Promise<ArtObject[]> {
-    const response = await fetch(`${baseURL}/search?hasImages=true&q=${encodeURIComponent(query)}`);
-    const result = await response.json()as ListArtObject;
-    const artObjects:ArtObject[] = [];
+export async function getSearchObjects(query: string, DateBegin?: string, DateEnd?: string, geoLocation?: string, isHighlight?: boolean): Promise<ArtObject[]> {
+    let url = `${baseURL}/search?hasImages=true&q=${encodeURIComponent(query)}`;
+    if (DateBegin) {
+        url += `&DateBegin=${DateBegin}`;
+    }
+    if (DateEnd) {
+        url += `&DateEnd=${DateEnd}`;
+    }
+    if (geoLocation) {
+        url += `&geoLocation=${geoLocation}`;
+    }
+    if (isHighlight) {
+        url += `&isHighlight=true`;
+    }
+
+    const response = await fetch(url);
+    const result = await response.json() as ListArtObject;
+    const artObjects: ArtObject[] = [];
     for (const objectID of result.objectIDs.slice(0, 32)) {
         const art = await getArtByID(objectID);
         artObjects.push(art);

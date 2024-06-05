@@ -28,7 +28,7 @@ export default function Home() {
                             {wrapLettersWithSpan("Museum of Art")}
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-gray-600">Explore, Learn, Discover!</p>
-                        <p className="mt-2 text-lg leading-8 text-gray-600">Le <span className="text-orange-600">Museum of Art</span> is a cultural institution dedicated to the exploration and understanding of art in all its forms.</p>
+                        <p className="mt-2 text-lg leading-8 text-gray-600">The <span className="text-orange-600">Museum of Art</span> is a cultural institution dedicated to the exploration and understanding of art in all its forms.</p>
                         <div className="mt-10 flex flex-col items-center justify-center gap-x-6">
                             <a href="#" className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Visit Us</a>
                             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">Learn More <span aria-hidden="true">→</span></a>
