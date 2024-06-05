@@ -5,11 +5,7 @@
 ## Table des matières
 
 - [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Fonctionnalités](#fonctionnalités)
-- [Contribuer](#contribuer)
 - [Licence](#licence)
-
 ## Installation
 
 ### Prérequis
